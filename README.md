@@ -1,2 +1,2 @@
 # COSC220
-Chest pain
+Class Code and Labs, etc.
