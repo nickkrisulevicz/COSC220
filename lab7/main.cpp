@@ -17,13 +17,18 @@ int main(){
 	int x = 50;
 	int t1 = 0;
 	int t2 = 1;
+	double start1 = double(clock());
 
 	cout << "Fibonacci sequence with linear recursion" << endl;
 	cout << linearrecursion(x, t1, t2); //call the recursive function to print the fibonacci sequence
 	cout << endl;
-	
-	cout << "____________________" << endl << endl;
+	double finish1 = double(clock());
+	double elapsed1 = finish1-start1;
+	cout << "Time elapsed: " << elapsed1 << " seconds" << endl;
 
+	cout << "____________________" << endl << endl;
+	
+	double start2 = double(clock());
 	cout << "Search an element in the array using iterative recursion" << endl;
 	int array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 	for(int i = 0; i < 15; i++){
@@ -44,9 +49,14 @@ int main(){
 	else{
 		cout << "The element was not in the array" << endl; //if number is not found, print a message saying it was not found
 	}
+
+	double finish2 = double(clock());
+	double elapsed2 = finish2-finish1;
+	cout << "Time elapsed: " << elapsed2 << " seconds" << endl;
 	
 	cout << "____________________" << endl << endl;
 	
+	double start3 = double(clock());
 	cout << "Search an element in the array using binary recursion" << endl; 
 	for(int j = 0; j < 15; j++){
 		cout << array[j] << " "; //print the array
@@ -68,6 +78,10 @@ int main(){
 	else{
 		cout << "Element not found in the array" << endl << endl; //if the number was not found, print a message saying it was not found
 	}
+
+	double finish3 = double(clock());
+	double elapsed3 = finish3-start3;
+	cout << "Time elapsed: " << elapsed3 << " seconds" << endl;
 
 	return 0;
 }
